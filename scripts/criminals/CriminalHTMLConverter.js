@@ -7,7 +7,8 @@ export const criminalHTMLConverter = (mugShot) => {
                         </p>
                         <p class="criminal--specs">
                               Age: ${mugShot.age}<br>
-                              <span class="crime">Crime: ${mugShot.conviction}</span><br>
+                              <span class="crime">Crime: ${mugShot.conviction}</span>
+                              <br>
                               Term start: ${new Date(mugShot.incarceration.start).toLocaleDateString('en-US')}<br>
                               Term end: ${new Date(mugShot.incarceration.end).toLocaleDateString('en-US')}
                         </p>

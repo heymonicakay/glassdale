@@ -1,0 +1,28 @@
+.criminalsContainer {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+}
+.criminal--card {
+      justify-self: space-around;
+      align-items: left;
+      margin: 1rem;
+      width: 30%;
+      height: auto;
+}
+.criminal--info {
+      display: block;
+      border: 1px solid black;
+      padding: .5rem .75rem;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+} 
+.criminal--name {
+      font-size: larger;
+      font-weight: 420;
+      margin-bottom: -.5rem;
+}
+
+.crime {
+      text-transform: capitalize;
+}
+

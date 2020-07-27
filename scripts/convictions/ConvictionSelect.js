@@ -23,11 +23,11 @@ export const ConvictionSelect = () => {
             Look back at the example provided above.
         */
                   contentTarget.innerHTML = `
-                        <select class="dropdown" id="crimeSelect">
+                        <select class="dropdown__custom" id="crimeSelect">
                               <option value="0">
                                     Please select a crime...
                               </option>
-                                    ${convicionsCollection.map(
+                                    ${convictionsCollection.map(
                                           convictionObject => {
                                                 return `
                                                       <option class="option__crime">

@@ -11,7 +11,7 @@
       height: auto;
 }
 .criminal--info {
-      display: block;
+      display: flex;
       border: 1px solid black;
       padding: .5rem .75rem;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -25,4 +25,24 @@
 .crime {
       text-transform: capitalize;
 }
+
+.dropdown__custom {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      width: 10%;
+      position: relative;
+      left: 1rem;
+}
+
+.dropdown__custom:hover {
+      width: 20%;
+      transition: 2s;
+      cursor: pointer;
+      background-color: pink;
+}
+
+.option__crime {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: pink;
+}
+
 

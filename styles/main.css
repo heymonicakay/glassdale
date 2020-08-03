@@ -11,7 +11,7 @@
       height: auto;
 }
 .criminal--info {
-      display: flex;
+      display: block;
       border: 1px solid black;
       padding: .5rem .75rem;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

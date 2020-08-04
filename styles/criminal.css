@@ -1,0 +1,74 @@
+.container--criminal-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: azure;
+}
+
+.header--criminal-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.container--criminal-cards {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      justify-self: center;
+      margin: -1rem;
+}
+
+.container--criminal-card {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 20%;
+      background-color: rgb(158, 203, 203);
+      margin: .5rem;
+      position: relative;
+} 
+
+.container--criminal-card-details {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      margin-bottom: -.5rem;
+      width: 100%;
+      height: 70%;
+      position: relative;
+      color: black;
+}
+
+.criminal-card-detail {
+      margin-top: .5rem;
+}
+
+.criminal-card-detail--name {
+      font-size: 1.5rem;
+      font-weight: 450;
+}
+
+.container--criminal-card-button {
+      display: flex;
+      justify-content: center;
+      height: 30%;
+      width: 100%;
+}
+
+.button--associates {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      cursor: pointer;
+      font-weight: 40;
+      font-size: -.1rem;
+      padding: 1rem .5rem;
+}
+
+.container--criminal-card-button:hover {
+      background-color: rgb(147, 189, 154);
+      color: linen;
+      transition: 1.5s;
+}
+

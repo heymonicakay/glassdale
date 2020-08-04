@@ -1,12 +1,12 @@
-let criminals = []
+let lineup = []
 
-export const useCriminals = () => criminals.slice()
+export const useCriminals = () => lineup.slice()
 
 export const getCriminals = () => {
     return fetch("https://criminals.glassdale.us/criminals")
         .then(burrito => burrito.json())
         .then(parsleyCriminals => {
-                criminals = parsleyCriminals 
+                lineup = parsleyCriminals 
             }
         )
     /*

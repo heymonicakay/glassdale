@@ -1,48 +1,24 @@
-.criminalsContainer {
+@import "./criminal.css";
+@import "./pop-up.css";
+@import "./header.css";
+
+* {
+      /* border: 1px dotted hotpink; */
+}
+
+body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: azure;
+
+}
+
+.main {
+      background-color: rgb(210, 242, 255);
       display: flex;
-      flex-flow: row wrap;
-      justify-content: space-evenly;
-}
-.criminal--card {
-      justify-self: space-around;
-      align-items: left;
-      margin: 1rem;
-      width: 30%;
-      height: auto;
-}
-.criminal--info {
-      display: block;
-      border: 1px solid black;
-      padding: .5rem .75rem;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-} 
-.criminal--name {
-      font-size: larger;
-      font-weight: 420;
-      margin-bottom: -.5rem;
+      flex-flow: column wrap;
 }
 
-.crime {
-      text-transform: capitalize;
+.header {
+      background-color: rgb(158, 203, 203);
+      display: flex;
 }
-
-.dropdown__custom {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      width: 10%;
-      position: relative;
-      left: 1rem;
-}
-
-.dropdown__custom:hover {
-      width: 20%;
-      transition: 2s;
-      cursor: pointer;
-      background-color: pink;
-}
-
-.option__crime {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      background-color: pink;
-}
-
-

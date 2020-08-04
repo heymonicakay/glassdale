@@ -1,18 +1,33 @@
-export const criminalHTMLConverter = (mugShot) => {
+
+export const criminalCardCreator = (mugShot) => {
       return `
-            <section class="criminal--card">
-                  <div class="criminal--info">
-                        <p class="criminal--name">
+            <span class="container--criminal-card">
+                  <div class="container--criminal-card-details">
+                        <span class="criminal-card-detail criminal-card-detail--name">
                               ${mugShot.name}
-                        </p>
-                        <p class="criminal--specs">
-                              Age: ${mugShot.age}<br>
-                              <span class="crime">Crime: ${mugShot.conviction}</span>
-                              <br>
-                              Term start: ${new Date(mugShot.incarceration.start).toLocaleDateString('en-US')}<br>
+                        </span>
+                        <span class="criminal-card-detail criminal-card-detail--age">
+                              Age: ${mugShot.age}
+                        </span>
+                        <span class="criminal-card-detail criminal-card-detail--crime">
+                              Crime: ${mugShot.conviction.charAt(0).toUpperCase() + mugShot.conviction.slice(1)}
+                        </span>
+                        <span class="criminal-card-detail criminal-card-detail--incar-start-date">
+                              Term start: ${new Date(mugShot.incarceration.start).toLocaleDateString('en-US')}
+                        </span>                        <span class="criminal-card-detail criminal-card-detail--incar-end-date">
                               Term end: ${new Date(mugShot.incarceration.end).toLocaleDateString('en-US')}
-                        </p>
+                        </span>
+                        <span class="associate-list child">
+                        </span>
                   </div>
-            </section>
+                  
+                  <div class="container--criminal-card-button">
+                        <span class="button button--associates associates--${mugShot.id}">
+                              Show Known Associates
+                        </span>
+                  </div>
+                  
+            </span>
+            
       `
 }

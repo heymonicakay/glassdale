@@ -1,20 +1,19 @@
-
-
 import { useConvictions, getConvictions } from "./ConvictionProvider.js"
 
 
-const contentTarget = document.querySelector(".filters__crime")
-const eventHub = document.querySelector(".container")
+const crimeFilterTarget = document.querySelector(".filter__by-crime")
+const eventHub = document.querySelector(".container__filters")
 
-contentTerget.addEventListener("change", (changeEvent) => {
+crimeFilterTarget.addEventListener("change", (changeEvent) => {
 
-      const customEvent = new CustomEvent("crimeWasChosen", {
+      const crimeChosenEvent = new CustomEvent("crimeWasChosen", {
+            //what info is included in the payload to eventHub? 
             detail: {
-                  crimeID: changeEvent.target.value
+                  crimeId: changeEvent.target.value
             }
       })
-
-      eventHub.dispatchEvent(customEvent)
+//dispatch the custom event to the eventHub
+      eventHub.dispatchEvent(crimeChosenEvent)
 })
 
 export const ConvictionSelect = () => {
@@ -25,16 +24,16 @@ export const ConvictionSelect = () => {
 
             const render = convictionsCollection => {
     
-                  contentTarget.innerHTML = `
-                        <select class="dropdown__custom" id="crimeSelect">
-                              <option value="0">
+                  crimeFilterTarget.innerHTML = `
+                        <select class="select select__dropdown select__dropdown--filter-by-crime">
+                              <option class="option option--none value="0">
                                     Please select a crime...
                               </option>
                                     ${convictionsCollection.map(
                                           convictionObject => {
                                                 return `
-                                                      <option class="option__crime">
-                                                            ${convictionObject.name}
+                                                      <option class="option option--crime">
+                                                            ${convictionObject.name.charAt(0).toUpperCase() + convictionObject.name.slice(1)}
                                                       </option>`
                                           }
                                     ).join("")

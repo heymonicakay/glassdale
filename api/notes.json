@@ -1,5 +1,20 @@
 {
     "notes": [
-          
+        {
+            "id": 1,
+            "title": "Note about felon",
+            "timestamp": "07/29/2020",
+            "author": "Suzie Police",
+            "content": "I think Colonel Mustard did it.",
+            "criminalId": 5
+        },
+        {
+            "id": 2,
+            "title": "Another note about another felon.",
+            "timestamp": "09/29/2020",
+            "author": "Monica Kay",
+            "content": "I think they're innocent.",
+            "criminalId": 7
+        }
     ]
 }

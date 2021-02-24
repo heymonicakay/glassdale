@@ -1,6 +1,7 @@
 @import "./criminal.css";
 @import "./pop-up.css";
 @import "./header.css";
+@import "./note-form.css";
 
 * {
       /* border: 1px dotted hotpink; */
@@ -15,7 +16,7 @@ body {
 .main {
       background-color: rgb(210, 242, 255);
       display: flex;
-      flex-flow: column wrap;
+      flex-flow: row nowrap;
 }
 
 .header {

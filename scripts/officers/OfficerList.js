@@ -1,14 +1,14 @@
 import { useOfficers, getOfficers } from "./OfficerProvider.js";
 import { OfficerHTMLConverter } from "./OfficerHTMLConverter.js";
 
-const contentTarget = document.querySelector(".officersContainer")
+const contentTarget = document.querySelector(".container--officer-list")
 
 export const OfficerList = () => {
 
     getOfficers()
         .then(() => {
             const officerArray = useOfficers()
-
+            console.table(officerArray)
             let officerHTMLRepresentations = ""
 
             officerArray.forEach(officer => {
@@ -16,10 +16,11 @@ export const OfficerList = () => {
             })
 
             contentTarget.innerHTML = `
-                
+
                 <article class="officerList">
                     ${ officerHTMLRepresentations }
                 </article>
             `
         })
 }
+

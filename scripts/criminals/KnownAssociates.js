@@ -4,23 +4,23 @@ const eventHub = document.querySelector(".main")
 
 eventHub.addEventListener("theButtonWasClicked", customEvent => {
 
-      const mugShotId = customEvent.detail.thisCriminalId
-      
-      const allCriminals = useCriminals()
+  const mugShotId = customEvent.detail.thisCriminalId
 
-      const matchingCriminal = allCriminals.find(
-            (criminal) => {
-            return criminal.id === mugShotId
-            }
-      )
-      
-      showAssociates(matchingCriminal)
-      
+  const allCriminals = useCriminals()
+
+  const matchingCriminal = allCriminals.find(
+    (criminal) => {
+      return criminal.id === mugShotId
+    }
+  )
+    console.log("TEST - matchingCriminal value", matchingCriminal)
+  showAssociates(matchingCriminal)
+
 })
 
 const showAssociates = (thisCriminal) => {
 
-      const changeCard = document.querySelector(".associate-list")
+      const changeCard = document.querySelector(".card--" + `${thisCriminal.id}`)
 
       changeCard.classList.toggle("show-associate-list")
 
